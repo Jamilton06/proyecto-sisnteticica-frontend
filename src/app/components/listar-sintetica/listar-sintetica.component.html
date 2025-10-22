@@ -1,0 +1,10 @@
+<table>
+    <tr>
+        <th>Nombre</th>
+        <th>Administrador</th>
+    </tr>
+    <tr *ngFor="let sintetica of sinteticas">
+        <th>{{sintetica?.name}}</th>
+        <th>{{sintetica?.id_establecimiento}}</th>
+    </tr>
+</table>

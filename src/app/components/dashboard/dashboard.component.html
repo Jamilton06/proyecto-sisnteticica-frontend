@@ -1,0 +1,39 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav="matSidenav" mode="side" opened>
+        <img class="avatar mat-elevation-z8"
+            src="https://img.freepik.com/vector-premium/vector-diseno-icono-avatar-persona-uso-multiple-ilustracion-vectorial_625349-284.jpg?w=2000">
+        <h4 class="name"></h4>
+
+        <p class="nivelEstudiantil">Hola {{usernameActual}}</p>
+
+        <button class="menu-button" mat-button>
+            <mat-icon>person</mat-icon>
+            <span><a [routerLink]="['dash-home']">Home</a></span>
+        </button>
+        <button class="menu-button" mat-button *ngIf="rolActual == 'NORMAL'">
+            <mat-icon>person</mat-icon>
+            <span><a [routerLink]="['listar-sinteticas']">Sinteticas</a></span>
+        </button>
+
+        <button class="menu-button" mat-button *ngIf="rolActual == 'ADMIN'">
+            <mat-icon>person</mat-icon>
+            <a [routerLink]="['listar-usuarios']">clientes</a>
+        </button>
+        <button class="menu-button" mat-button>
+            <mat-icon>person</mat-icon>
+            <span>Interes</span>
+        </button>
+        <mat-divider></mat-divider>
+        <button class="menu-button" mat-button (click)="logout()">
+            <mat-icon>logout</mat-icon>
+            <span>Salir</span>
+        </button>
+
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <div class="content mat-elevation-z8">
+            <router-outlet></router-outlet>
+
+        </div>
+    </mat-sidenav-content>
+</mat-sidenav-container>

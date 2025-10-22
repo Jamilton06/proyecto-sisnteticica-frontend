@@ -1,0 +1,41 @@
+<mat-toolbar class="navbar">
+
+
+
+    <a [routerLink]="'/'" mat-icon-button class="example-icon" arial-label="Example icon-button with menu icon">
+        <mat-icon> location_on</mat-icon>
+        <span>SYNTURF</span>
+    </a>
+    <span class="example-spacer"></span>
+    <a *ngIf="!isLoggedIn" [routerLink]="'/login'" mat-icon-button class="example-icon favorite-icon"
+        aria-label="Example icon-button with heart icon">
+        INICIAR SESION
+    </a>
+    <span class="example-spacer"></span>
+    <a *ngIf="!isLoggedIn" [routerLink]="'/registrar'" mat-icon-button class="example-icon favorite-icon "
+        aria-label="Example icon-button with heart icon">
+        REGISTRAR
+    </a>
+    <span class="example-spacer"></span>
+    <a *ngIf="!isLoggedIn" [routerLink]="'/sinteticas'" mat-icon-button class="example-icon favorite-icon "
+        aria-label="Example icon-button with heart icon">
+        SINTETICAS
+    </a>
+
+    <span class="example-spacer"></span>
+    <a *ngIf="isLoggedIn" [routerLink]="'/dashboard/dash-home'" style="margin-right: 50px" mat-icon-button
+        class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        DASHBOARD
+    </a>
+
+    <a *ngIf="isLoggedIn" (click)="logout()" style="margin-right: 50px" mat-icon-button
+        class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+        Cerrar sesión
+    </a>
+
+
+    <button *ngIf="isLoggedIn && user" aria-label="Example icon-button with heart icon">
+        {{ user.username }}
+    </button>
+
+</mat-toolbar>

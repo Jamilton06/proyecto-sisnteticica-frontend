@@ -1,0 +1,93 @@
+.footerTable {
+    width: 100%;
+}
+
+
+
+.laterales {
+    color: #383838;
+    width: 20%;
+}
+
+.general {
+
+    width: 15%;
+}
+
+table,
+td,
+th {
+    font-family: "Gill Sans MT Ext Condensed Bold";
+    border-collapse: collapse;
+    color: aliceblue;
+    text-align: left;
+    font-size: 16px;
+}
+
+.tdiconredes {
+    width: 20%;
+}
+
+footer {
+    background-color: #383838;
+    margin-top: auto;
+
+
+}
+
+
+li {
+    display: inline;
+}
+
+a {
+    outline: none;
+    text-decoration: none;
+    display: inline-block;
+    width: 48px;
+    height: 36px;
+    margin-right: 0.625%;
+    text-align: center;
+    line-height: 3;
+    color: black;
+}
+
+li:last-child a {
+    margin-right: 0;
+}
+
+a:link,
+a:visited,
+a:focus {
+    background-image: url("../../img/redesfooter.jpg");
+}
+
+.icon-redes {
+    width: 22px;
+    height: 36px;
+}
+
+.facebook-f {
+    background-size: 300px;
+    background-position: -98px -36px;
+}
+
+.twitter-f {
+    background-size: 300px;
+    background-position: -24px -35px;
+}
+
+.instagram-f {
+    background-size: 300px;
+    background-position: -25px -105px;
+}
+
+.youtube-f {
+    background-size: 300px;
+    background-position: -95px -105px;
+}
+
+.wathsapp-f {
+    background-size: 300px;
+    background-position: -235px -37px;
+}

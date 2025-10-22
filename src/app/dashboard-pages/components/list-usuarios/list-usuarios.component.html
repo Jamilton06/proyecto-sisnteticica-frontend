@@ -1,0 +1,39 @@
+<div class="table-responsive">
+    <table class="table table-striped">
+
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Email</th>
+                <th>Ciudad</th>
+                <th>Username</th>
+                <th>Rol</th>
+
+                <th colspan="4">Acciones</th>
+
+
+            </tr>
+        </thead>
+        <tbody class="table-striped" *ngFor="let usuario of usuarios;let indice=index">
+            <tr>
+
+                <td>{{indice+1}}</td>
+                <td>{{usuario?.name}}</td>
+                <td>{{usuario?.lastname}}</td>
+                <td>{{usuario?.email}}</td>
+                <td>{{usuario?.city}}</td>
+                <td>{{usuario?.username}}</td>
+                <td>{{usuario?.authorities[0].authority}}</td>
+
+                <td><mat-icon>receipt</mat-icon></td>
+                <td><mat-icon>edit</mat-icon></td>
+                <td><mat-icon>delete</mat-icon></td>
+
+
+            </tr>
+
+        </tbody>
+    </table>
+</div>
